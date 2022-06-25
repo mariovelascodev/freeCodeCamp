@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color1: #3c6fd1;
+    --color2: #20bf55;
+    --color3: #f4f4f8;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #091619;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: var(--color3);
+    font-size: 2.3rem;
+}
+
+p {
+    color: var(--color2);
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color1);
+    font-size: 1.8rem;
+}
+
+#navbar li {
+    list-style: none;
+    display: inline;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: var(--color3);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#navbar li a:hover {
+    color: var(--color2);
+}
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section h1 {
+    color: var(--color3);
+    align-self: center;
+    font-size: 3rem;
+}
+
+#welcome-section p {
+    font-size: 2rem;
+    align-self: center;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 7rem;
+}
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+}
+
+#projects .projects-grid img {
+    width: 90%;
+    display: block;
+    margin: 3rem auto auto;
+}
+
+#projects .projects-grid p{
+    background-color: var(--color1);
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+#projects .projects-grid .project-tile {
+    color: var(--color3);
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#projects .projects-grid .project-tile:hover {
+    color: var(--color2);
+}
+
+#projects .btn {
+    margin: 1.3rem;
+    padding: 1.3rem;
+    background-color: var(--color1);
+    color: var(--color3);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#projects .btn:hover {
+    background-color: var(--color2);
+}
+
+#contact {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact p {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem auto;
+}
+
+.contact-links .contact-details {
+    text-decoration: none;
+    font-size: 2.3rem;
+    align-self: stretch;
+}
+
+.contact-links .contact-details:hover {
+    color: var(--color2);
+}
+
+footer {
+    border-top: 1rem solid var(--color1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color2);
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 768px) {
+    h2 {
+        font-size: 3.3rem;
+    }
+
+    #navbar {
+        justify-content: flex-end;
+        font-size: 2rem;
+    }
+
+    #navbar li a {
+        margin: 0.5rem 2rem;
+    }
+
+    #welcome-section h1 {
+        font-size: 9rem;
+    }
+
+    #welcome-section p {
+        font-size: 5rem;
+    }
+
+    #projects {
+        scroll-margin-top: 10rem;
+    }
+
+    #projects .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #projects .btn {
+        margin: 4.3rem;
+        padding: 1.6rem;
+    }
+
+    #contact p {
+        font-size: 2.2rem;
+    }
+
+    footer {
+        font-size: 2.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #projects .projects-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #projects .projects-grid img {
+        width: 80%;
+    }
+
+    #projects .projects-grid p {
+        width: 80%;
+    }
+}
