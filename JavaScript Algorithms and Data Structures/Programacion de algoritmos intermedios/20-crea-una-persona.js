@@ -32,4 +32,8 @@ const Person = function (firstAndLast) {
 };
 
 const bob = new Person('Bob Ross');
+bob.getFirstName();
+bob.getLastName();
 bob.getFullName();
+bob.setFirstName("Haskell");
+bob.setFullName("Haskell Curry");
